@@ -12,8 +12,9 @@ jobs:
       - uses: aquaproj/aqua-installer@6ce1f8848ec8e61f14d57bd5d7597057a6dd187c # v3.0.1
         with:
           aqua_version: v2.29.0
-      - run: mkdir build
       - run: typst compile main.typ
-      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4.3.4
         with:
-          path: build
+          name: artifact
+          path: main.pdf
