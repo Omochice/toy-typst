@@ -7,7 +7,7 @@ jobs:
   Build-typst:
     runs-on: ubuntu-latest
     steps:
-      - run: apt-get update && apt-get install --yes fonts-noto
+      - run: sudo apt-get update && sudo apt-get install --yes fonts-noto
       - name: checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - uses: aquaproj/aqua-installer@6ce1f8848ec8e61f14d57bd5d7597057a6dd187c # v3.0.1
